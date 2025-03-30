@@ -16,6 +16,7 @@ import java.util.List;
 public class QuestionService {
     @Autowired
     QuestionRepo questionRepo ;
+//    !  some question about the questionRepo if it has a list but it is not declared as a list 
 
     public ResponseEntity<List<Question>> getAllQuestions() {
         try {
@@ -52,6 +53,7 @@ public class QuestionService {
 
         for(Integer id : questionIds){
             questions.add(questionRepo.findById(id).get());
+//            questionRepo.findAllById(questionIds);  second solution
         }
 
         for(Question question : questions){

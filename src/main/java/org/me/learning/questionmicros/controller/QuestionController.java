@@ -47,11 +47,11 @@ public class QuestionController {
 
     @PostMapping("getQuestions")
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
-        System.out.println(environment.getProperty("local.server.port"));
+        System.out.println(environment.getProperty("local.server.port")); // to print the port number to know which instance we use and how it switch between them
         return questionService.getQuestionsFromId(questionIds);
     }
 
-    @PostMapping("getScore")
+    @PostMapping("getScore")  // this will come from the quizService , the data will be send from there to get a score
     public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses)
     {
         return questionService.getScore(responses);
@@ -61,5 +61,6 @@ public class QuestionController {
     // generate
     // getQuestions (questionid)
     // getScore
+//  !  admin portal
 
 }
