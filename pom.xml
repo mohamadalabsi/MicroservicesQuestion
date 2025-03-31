@@ -44,6 +44,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+<!--        this we do not need it here -->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
