@@ -22,7 +22,7 @@ public class QuestionService {
         try {
             return new ResponseEntity<List<Question>>(questionRepo.findAll(), HttpStatus.OK);
         }catch (Exception e){
-            e.printStackTrace();
+            e.printStackTrace(); // print the exception message
         }
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
     }
@@ -41,6 +41,15 @@ public class QuestionService {
         questionRepo.save(question);
         return new ResponseEntity<>("success",HttpStatus.CREATED);
     }
+
+
+
+
+
+
+
+
+
 
     public ResponseEntity<List<Integer>> getQuestionsForQuiz(String categoryName, Integer numQuestions) {
         List<Integer> questions = questionRepo.findRandomQuestionsByCategory(categoryName, numQuestions);

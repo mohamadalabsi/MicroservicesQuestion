@@ -11,7 +11,9 @@ import java.util.List;
 @Repository
 public interface QuestionRepo extends JpaRepository<Question, Integer> {
 
-
+//    ! some time here we do not have to write the JPQL Query to get specific thing from the DB ,
+//    we can just write the method and spring will generate it , if it is complex then yes we
+//    have to
 
         List<Question> findByCategory(String category);
 

@@ -39,6 +39,18 @@ public class QuestionController {
         return  questionService.addQuestion(question);
     }
 
+//    ! this service till here is running alone and it could be this way because microservices
+//    can run independently from each other that mean if any service go down the other will stay
+//    running 
+
+
+
+
+
+
+
+
+
     @GetMapping("generate")
     public ResponseEntity<List<Integer>> getQuestionsForQuiz
             (@RequestParam String categoryName, @RequestParam Integer numQuestions ){
