@@ -57,8 +57,10 @@ public class QuestionService {
     }
 
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(List<Integer> questionIds) {
-        List<QuestionWrapper> wrappers = new ArrayList<>();
-        List<Question> questions = new ArrayList<>();
+        List<QuestionWrapper> wrappers = new ArrayList<>(); // we made a new class without the
+        // answers for questions and then here we put the questions we want inside it
+        List<Question> questions = new ArrayList<>();// and this empty arraylist to store the
+        // questions from the database because it matches all the fields
 
         for(Integer id : questionIds){
             questions.add(questionRepo.findById(id).get());
