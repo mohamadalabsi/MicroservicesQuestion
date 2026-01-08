@@ -61,7 +61,7 @@ public class QuestionController {
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
         System.out.println(environment.getProperty("local.server.port")); // to print the port
         // number to know which instance we use and how it switch between them , at the end to
-        // test instance
+        // test instance for load balancer
         return questionService.getQuestionsFromId(questionIds);
     }
 
